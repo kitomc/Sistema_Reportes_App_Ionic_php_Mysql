@@ -1,56 +1,46 @@
 <?php
 
 
-class SQL_Conection  { }
-{
-
+class Mysql_Conexion  {}{
 
 
         // atributos
-
-$hosting;
-$user;
-$pw;
+$hosting='localhost';
+$user="root";
+$pw="";
 $status;
-$instance= new SQL_Conection;
- $counter;
- $dataBase;
- $puerto;
+$dataBase;
+$puerto=3306;
 
  //Conexion con base
  $enlace=mysqli_connect($hosting,$user,$pw,$dataBase,$puerto);
 
 
-// funciones
- function __constructor($Localhost,$User,$Pw,$DataBase,$Puerto){
-    
-    $hosting=$Localhost;
-    $user = $User;
-    $pw= $Pw;
-    $dataBase= $DataBase;
-    $puerto=$Puerto;
+//  sentenecias MySQL
 
-    
+// creacion de base de datos 
+$sql="create database sistema_Reportes;"
 
-}
-
-//Patron de diseño Singleton para unica instancia de la clase
-function get_Instancia()
+function estructura_DB ()
 {
-   if (isset($instance)) {
-       return $instance;
-    }
-    $instance= new SQL_Conection  ;
+
+if (mysql_query($sql,$enlace)) {
+    echo "Base de datos creada Correctamente \n";
+    
+}
+else
+{
+    echo "Error al crear Base de Dato \n";
+
+}
+
+
 }
 
 
 
 
-function open(){
 
 
-}
 
-}
 
-?>
