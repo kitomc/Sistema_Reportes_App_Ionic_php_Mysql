@@ -6,6 +6,8 @@ abstract class Usuario
     private $Usuario;
     private $Contraseña;
     private $Correo;
+    private $reporte;
+    
 
 }
 
