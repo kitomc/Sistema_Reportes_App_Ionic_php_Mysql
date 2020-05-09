@@ -1,0 +1,16 @@
+<?php
+
+interface ProveedorInterface{
+
+
+
+    
+}
+
+
+
+
+
+
+
+?>
