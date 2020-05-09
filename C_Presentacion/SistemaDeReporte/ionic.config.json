@@ -1,0 +1,7 @@
+{
+  "name": "SistemaDeReporte",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
