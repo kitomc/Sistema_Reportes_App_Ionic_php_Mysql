@@ -33,7 +33,7 @@ public function GetDataBase(){
 //  sentenecias MySQL
 
 // creacion de base de datos 
-$sql="create database sistema_Reportes"
+
 
 
 
